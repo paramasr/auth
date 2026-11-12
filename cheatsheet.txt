@@ -1,0 +1,12 @@
+1. Alembic commands used:
+    a. Generate script for new/update schemas: 
+        alembic revision --autogenerate -m "add password reset tokens"
+    b. Generate tables using Alembinc:
+        alembic upgrade head
+
+2. Docker commands:
+    a. Verify newly created table exists:
+        docker exec -it auth-postgres psql -U authuser -d authdb
+        Then: \q <table_name>
+
+    
